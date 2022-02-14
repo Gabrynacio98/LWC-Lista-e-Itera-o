@@ -13,6 +13,9 @@ export default class App extends LightningElement {
   */
   visivelCaverna = true;
   visivelPokemon = true;
+  visivelQuemEh = true;
+  visivelPokeHidden = "https://th.bing.com/th/id/R.2cdf03e14becb11e096ba09e044afd05?rik=lD9Tpi2q6i8Glw&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fquiz%2f675000%2f675456_1313621275255_500_375.png&ehk=PyFD4e7poD1VNQKzljXTZ1E4d4BqRBuo2PUNNc%2f6iok%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1";
+  visivelRevelado = "https://cdn2.bulbagarden.net/upload/thumb/0/02/WTP_EP057.png/300px-WTP_EP057.png";
   
 
   mostrarPokemon(){
@@ -23,6 +26,21 @@ export default class App extends LightningElement {
     }
   }
 
+    quemEh(){
+    if(this.visivelQuemEh == true){
+      this.visivelQuemEh = false; 
+    }else{
+      this.visivelQuemEh = true;
+    }
+  }
+
+  pokeRevelado(){
+    if(this.visivelPokeHidden == "https://th.bing.com/th/id/R.2cdf03e14becb11e096ba09e044afd05?rik=lD9Tpi2q6i8Glw&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fquiz%2f675000%2f675456_1313621275255_500_375.png&ehk=PyFD4e7poD1VNQKzljXTZ1E4d4BqRBuo2PUNNc%2f6iok%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1"){
+      this.visivelPokeHidden = "https://cdn2.bulbagarden.net/upload/thumb/0/02/WTP_EP057.png/300px-WTP_EP057.png";
+    }else{
+      this.visivelPokeHidden = "https://th.bing.com/th/id/R.2cdf03e14becb11e096ba09e044afd05?rik=lD9Tpi2q6i8Glw&riu=http%3a%2f%2fimages4.fanpop.com%2fimage%2fquiz%2f675000%2f675456_1313621275255_500_375.png&ehk=PyFD4e7poD1VNQKzljXTZ1E4d4BqRBuo2PUNNc%2f6iok%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1";
+    }
+  }
   
 
 
