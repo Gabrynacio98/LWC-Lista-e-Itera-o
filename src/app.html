@@ -5,7 +5,12 @@
 
 
 			<!-- BOTAO PARA FAZER OS POKEMANO DE UM TIPO ESCONDER E APARECER (ainda nao funfa) -->
-			<lightning-button variant="Brand" label="Mostrar Fogo" title="Mostrar Fogo" onclick={mostrarPokemon}
+			<lightning-button variant="Brand" label="mostrarPokemon" title="mostrarPokemon" onclick={mostrarPokemon}
+				class="slds-m-left_x-small">
+			</lightning-button>
+
+			<!-- BOTAO MOSTRAR QUEM É O POKEMON BUT  NOT REALLY -->
+			<lightning-button variant="Brand" label="Who's Dat?" title="Who's Dat?" onclick={quemEh}
 				class="slds-m-left_x-small">
 			</lightning-button>
 
@@ -16,7 +21,7 @@
 			</lightning-button>
 
 			<template for:each={pokemons} for:item="poke">
-				<div key={poke.id} class={poke.tipo} if:true={visivelPokemon}>
+				<div key={poke.id} class={poke.tipo} if:false={visivelPokemon}>
 					<div>
 						<p>Pokemon: {poke.nome}</p>
 						<p>Tipo: {poke.tipo}</p>
@@ -41,6 +46,19 @@
 					<p><img src={boneco.img} width="100px"></p>
 				</div>
 			</template>
+
+
+
+			<div if:false={visivelQuemEh}>
+				<img src={visivelPokeHidden}
+				width="300px" onclick={pokeRevelado}/>
+
+			</div>
+
+
+
+
+
 
 		</div>
 	</lightning-card>
