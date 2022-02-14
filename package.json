@@ -1,5 +1,5 @@
 {
-  "name": "@wcd/gabrynacio98.lwc-kzmobscm",
+  "name": "@wcd/gabrynacio98.lwc-lista-pokemon",
   "version": "0.0.0",
   "scripts": {
     "serve": "npx wcd-cli@latest serve KMXe7SbHGy7iYH1NgWz2 --open"
