@@ -1,0 +1,27 @@
+div{
+    border: 2px solid black;
+    margin: 2px;
+}
+.Fogo{
+    background-color: #F08030;
+    color: pi;
+}
+.Fogo.Voador{
+    background-color: #F08030;
+    background-image: linear-gradient(to right, #F08030, #A890F0);
+}
+.Gelo.Voador{
+    background-image: linear-gradient(to right, #98D8D8, #A890F0);
+}
+.Gelo{
+    background-color:  #98D8D8; 
+}
+.Elétrico.Voador{
+    background-image: linear-gradient(to right, #F8D030, #A890F0);
+}
+.Elétrico{
+    background-color: #F8D030;
+}
+.Fantasma.Veneno{
+    background-image: linear-gradient(to right, #705898, #A040A0);
+}

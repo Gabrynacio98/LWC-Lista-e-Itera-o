@@ -1,0 +1,47 @@
+<template>
+	<lightning-card>
+		<div>
+			<h1 class="slds-text-heading_large">Estrutura de dados </h1>
+
+
+			<!-- BOTAO PARA FAZER OS POKEMANO DE UM TIPO ESCONDER E APARECER (ainda nao funfa) -->
+			<lightning-button variant="Brand" label="Mostrar Fogo" title="Mostrar Fogo" onclick={mostrarPokemon}
+				class="slds-m-left_x-small">
+			</lightning-button>
+
+
+			<!-- BOTAO PARA ESCONDER PERSONAGENS DA CAVERNA DO DRAGAO -->
+			<lightning-button variant="Brand" label="MostrarCaverna" title="MostrarCaverna" onclick={mostrarCaverna}
+				class="slds-m-left_x-small">
+			</lightning-button>
+
+			<template for:each={pokemons} for:item="poke">
+				<div key={poke.id} class={poke.tipo} if:true={visivelPokemon}>
+					<div>
+						<p>Pokemon: {poke.nome}</p>
+						<p>Tipo: {poke.tipo}</p>
+						<p>Nivel: {poke.nivel} <br/><br/></p>
+					</div>
+				</div>
+			</template>
+
+
+
+
+
+
+			<template for:each={cavernaPersonagens} for:item="boneco">
+				<div key={boneco.id} if:false={visivelCaverna}>
+					<p>Personagem: {boneco.personagem}</p>
+					<p>Arma: {boneco.arma}</p>
+					<p>Força: {boneco.forca} </p>
+					<p>Agilidade: {boneco.agilidade} </p>
+					<p>Inteligência: {boneco.inteligencia} </p>
+					<p>Estamina: {boneco.estamina} <br/><br/></p>
+					<p><img src={boneco.img} width="100px"></p>
+				</div>
+			</template>
+
+		</div>
+	</lightning-card>
+</template>
